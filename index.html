@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>India WhatsApp Cost Stories</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      padding: 2rem;
+    }
+    h2 {
+      margin-top: 3rem;
+      color: #2c3e50;
+    }
+    canvas {
+      margin: 1rem 0;
+      max-width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <h1>WhatsApp Business Platform: India-Centric Data Stories</h1>
+
+  <h2>1. India in Top 10 Cheapest Markets (Marketing Costs)</h2>
+  <canvas id="cheapestMarkets"></canvas>
+
+  <h2>2. India vs. Absolute Cheapest Market</h2>
+  <canvas id="top2Markets"></canvas>
+
+  <h2>3. India vs. Global Average Markup (Marketing - Utility)</h2>
+  <canvas id="markupCompare"></canvas>
+
+  <h2>4. India's Intra-type Cost Range (Marketing, Utility, Authentication)</h2>
+  <canvas id="intraTypeRange"></canvas>
+
+  <script>
+    // Chart 1: Top 10 Cheapest Marketing Costs
+    const cheapestMarkets = new Chart(
+      document.getElementById('cheapestMarkets'), {
+        type: 'bar',
+        data: {
+          labels: ['Colombia', 'India', 'Indonesia', 'Brazil', 'Mexico', 'Vietnam', 'Philippines', 'Egypt', 'Nigeria', 'Turkey'],
+          datasets: [{
+            label: 'Marketing Cost (INR)',
+            data: [0.25, 0.33, 0.35, 0.38, 0.40, 0.42, 0.45, 0.47, 0.49, 0.50],
+            backgroundColor: ctx => ctx.raw === 0.33 ? '#1abc9c' : '#3498db'
+          }]
+        },
+        options: {
+          plugins: {
+            title: {
+              display: true,
+              text: 'India is Among the 10 Cheapest Markets'
+            }
+          },
+          responsive: true,
+          scales: {
+            y: { beginAtZero: true }
+          }
+        }
+      });
+
+    // Chart 2: Top 2 Cheapest Markets
+    const top2Markets = new Chart(
+      document.getElementById('top2Markets'), {
+        type: 'bar',
+        data: {
+          labels: ['Colombia', 'India'],
+          datasets: [{
+            label: 'Marketing Cost (INR)',
+            data: [0.25, 0.33],
+            backgroundColor: ['#f39c12', '#2ecc71']
+          }]
+        },
+        options: {
+          plugins: {
+            title: {
+              display: true,
+              text: 'India vs. Absolute Cheapest Market'
+            }
+          },
+          responsive: true,
+          scales: {
+            y: { beginAtZero: true }
+          }
+        }
+      });
+
+    // Chart 3: Markup Comparison
+    const markupCompare = new Chart(
+      document.getElementById('markupCompare'), {
+        type: 'bar',
+        data: {
+          labels: ['India', 'Global Average'],
+          datasets: [{
+            label: 'Markup (INR)',
+            data: [0.11, 0.27],
+            backgroundColor: ['#e74c3c', '#95a5a6']
+          }]
+        },
+        options: {
+          plugins: {
+            title: {
+              display: true,
+              text: 'India Has a Lower Markup Than Global Average'
+            }
+          },
+          responsive: true,
+          scales: {
+            y: { beginAtZero: true }
+          }
+        }
+      });
+
+    // Chart 4: Intra-type Cost Range
+    const intraTypeRange = new Chart(
+      document.getElementById('intraTypeRange'), {
+        type: 'bar',
+        data: {
+          labels: ['India'],
+          datasets: [{
+            label: 'Cost Range (INR)',
+            data: [0.13],
+            backgroundColor: '#9b59b6'
+          }]
+        },
+        options: {
+          plugins: {
+            title: {
+              display: true,
+              text: 'India Has a Predictable Cost Structure'
+            }
+          },
+          responsive: true,
+          scales: {
+            y: { beginAtZero: true }
+          }
+        }
+      });
+  </script>
+</body>
+</html>
